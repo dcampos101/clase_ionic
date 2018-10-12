@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Respirapp
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>Aplicacion Respirapp</p>
+  <h1>Bienvenidos</h1> 
+  
+  <button ion-button [navPush]= "acerca">Acerca de</button>
+  <button ion-button (click)="iraNuevapagina()">Nueva</button>
+  <button ion-button (click)="iraAyuda()">Ayuda</button>
+<button ion-button (click) ="iraContamination()">Contamination</button>
+  </ion-content>
