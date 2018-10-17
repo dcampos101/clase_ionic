@@ -13,12 +13,22 @@ export class UserServiceProvider {
   constructor(public http: HttpClient) {
     console.log('Hello UserServiceProvider Provider');
   }
-getUsers(){
-  return this.http.get('https://randomuser.me/api/?results=25');
-}
+  getUsers(){
+    return this.http.get('https://randomuser.me/api/?results=25');
+  }
 
-getContamination(){
-  return this.http.get('https://shielded-savannah-22643.herokuapp.com/contamination_levels.json');
-}
+  getContamination(){
+    return this.http.get('https://shielded-savannah-22643.herokuapp.com/contamination_levels.json');
+  }
 
+  enviarChimenea(valor:any){
+    this.http.post("https://mysterious-basin-67013.herokuapp.com/entities",valor).subscribe(
+     data =>{
+       console.log(data)
+     } ,
+     error => {
+       console.log(error)
+     }
+    )
+  }
 }
