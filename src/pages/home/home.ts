@@ -5,6 +5,8 @@ import { NuevaPage } from '../nueva/nueva';
 import { AyudaPage } from '../ayuda/ayuda';
 import { ContaminationPage } from '../contamination/contamination';
 import { FormularioPage } from '../formulario/formulario';
+import { MapaPage } from '../mapa/mapa';
+import { CamaraPage } from '../camara/camara';
 
 // se importa la clase
 import { AlertController } from 'ionic-angular';
@@ -20,6 +22,8 @@ ayuda = AyudaPage;
 home = HomePage;
 contamination = ContaminationPage;
 formulario = FormularioPage;
+mapa = MapaPage;
+camara = CamaraPage;
 
   constructor(
     public navCtrl: NavController,
@@ -47,7 +51,6 @@ formulario = FormularioPage;
     console.log("Click a Formulario");
     this.navCtrl.push(this.formulario)
   }
-
 
   // funcion para la nueva pagina
   iraContamination(){
@@ -77,4 +80,13 @@ formulario = FormularioPage;
     alert.present();
   }
 
+  iraMapa(){
+    console.log("Click a Formulario");
+    this.navCtrl.push(this.mapa)
+  }
+
+  iraCamara(){
+    console.log("Click a Formulario");
+    this.navCtrl.push(this.camara)
+  }
 }
